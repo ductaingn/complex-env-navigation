@@ -4,7 +4,7 @@ logging: False
 
 # Path configuration
 path:
-  home: '/home/nguyen/Projects/ChargingRobot/raisim/raisimLib/complex-env-navigation/' # Setup the project directory path TODO: PATH_SETUP_REQUIRED # ex) /home/me/raisim/raisimLib/complex-env-navigation/
+  home: '~/ChargingRobot/raisim/raisimLib/complex-env-navigation' # Setup the project directory path TODO: PATH_SETUP_REQUIRED # ex) /home/me/raisim/raisimLib/complex-env-navigation/
   command_tracking: data/command_tracking_flat/final/full_16200.pt
   FDM: '/data/FDM_train/2024-10-31-21-30-09/full_0.pt' # Setup the trained FDM weight path relative to the project directory path  TODO: WEIGHT_PATH_SETUP_REQUIRED # ex) data/FDM_train/XXX/full_XXX.pt
   ITS: '/data/ITS_train/2024-11-01-08-43-15/full_0.pt'  # Setup the trained ITS weight path relative to the project directory path  TODO: WEIGHT_PATH_SETUP_REQUIRED # ex) data/ITS_train/XXX/full_XXX.pt

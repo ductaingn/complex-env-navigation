@@ -35,7 +35,8 @@ args = parser.parse_args()
 FDM_weight_path = args.fdm_weight
 
 # check if gpu is available
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+# device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device = torch.device('cpu')
 # torch.backends.cudnn.benchmark = True
 
 # directories
@@ -124,7 +125,7 @@ if cfg["logging"]:
     # wandb.watch(cvae_train_model, log='all', log_freq=150)
 
 print("Ready to start.")
-pdb.set_trace()
+# pdb.set_trace()
 
 for epoch in range(cfg["CVAE_training"]["command"]["num_epochs"]):
     if epoch % cfg["CVAE_training"]["command"]["evaluate_period"] == 0:
