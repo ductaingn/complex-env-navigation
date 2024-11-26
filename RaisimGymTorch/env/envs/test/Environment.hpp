@@ -295,11 +295,15 @@ namespace raisim
             footIndices_.insert(husky_->getBodyIdx("front_right_wheel"));
             footIndices_.insert(husky_->getBodyIdx("rear_left_wheel"));
             footIndices_.insert(husky_->getBodyIdx("rear_right_wheel"));
+            footIndices_.insert(husky_->getBodyIdx("front_bumper"));
+            footIndices_.insert(husky_->getBodyIdx("rear_bumper"));
             if (!harsh_collision) {
                 footIndices_.insert(husky_->getBodyIdx("front_left_wheel"));
                 footIndices_.insert(husky_->getBodyIdx("front_right_wheel"));
                 footIndices_.insert(husky_->getBodyIdx("rear_left_wheel"));
                 footIndices_.insert(husky_->getBodyIdx("rear_right_wheel"));
+                footIndices_.insert(husky_->getBodyIdx("front_bumper"));
+                footIndices_.insert(husky_->getBodyIdx("rear_bumper"));
             }
 
             /// visualize if it is the first environment
@@ -463,8 +467,8 @@ namespace raisim
         /// Get depth data
         raisim::Vec<3> lidarPos;
         raisim::Mat<3,3> lidarOri;
-        husky_->getFramePosition("lidar_cage_to_lidar", lidarPos);
-        husky_->getFrameOrientation("lidar_cage_to_lidar", lidarOri);
+        husky_->getFramePosition("imu_joint", lidarPos);
+        husky_->getFrameOrientation("imu_joint", lidarOri);
         double ray_length = 10.;
         Eigen::Vector3d direction;
         Eigen::Vector3d rayDirection;
@@ -678,6 +682,7 @@ namespace raisim
         /// if the contact body is not feet, count as collision
         for (auto &contact : husky_->getContacts()) {
             if (footIndices_.find(contact.getlocalBodyIndex()) == footIndices_.end()) {
+                std::cout<<"Collision!"<<std::endl;
                 return true;
             }
         }
@@ -690,10 +695,10 @@ namespace raisim
 //	    return collision_check();
 
         ///  if anymal falls down
-        raisim::Vec<3> base_position;
-        husky_->getFramePosition("base_to_base_inertia", base_position);
-        if (base_position[2] < 0.35)
-            return true;
+        // raisim::Vec<3> base_position;
+        // husky_->getFramePosition("base_to_base_inertia", base_position);
+        // if (base_position[2] < 0.35)
+        //     return true;
 
         return false;
     }

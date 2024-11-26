@@ -611,8 +611,8 @@ namespace raisim {
             /// Get depth data
             raisim::Vec<3> lidarPos;
             raisim::Mat<3, 3> lidarOri;
-            husky_->getFramePosition("lidar_cage_to_lidar", lidarPos);
-            husky_->getFrameOrientation("lidar_cage_to_lidar", lidarOri);
+            husky_->getFramePosition("imu_joint", lidarPos);
+            husky_->getFrameOrientation("imu_joint", lidarOri);
             double ray_length = 10.;
             Eigen::Vector3d direction;
             Eigen::Vector3d rayDirection;
@@ -827,12 +827,6 @@ namespace raisim {
             terminalReward = 0.f;
             return collision_check();
 
-            /// if husky falls down
-            // raisim::Vec<3> base_position;
-            // husky_->getFramePosition("base_to_base_inertia", base_position);
-            // if (base_position[2] < 0.35)
-            //    return true;
-            // return false;
         }
 
         void getMapSize(Eigen::Ref<EigenVec> map_size) {

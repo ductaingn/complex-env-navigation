@@ -279,7 +279,6 @@ for grid_size in [2.3, 3., 4., 5.]:
             env.reset()
             action_planner.reset()
             goal_position = env.set_goal()[np.newaxis, :]
-            print(n_path_failure)
             COM_buffer.reset()
 
             # Initialize
