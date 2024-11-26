@@ -682,7 +682,6 @@ namespace raisim
         /// if the contact body is not feet, count as collision
         for (auto &contact : husky_->getContacts()) {
             if (footIndices_.find(contact.getlocalBodyIndex()) == footIndices_.end()) {
-                std::cout<<"Collision!"<<std::endl;
                 return true;
             }
         }
@@ -692,7 +691,7 @@ namespace raisim
     bool isTerminalState(float &terminalReward) final
     {
         terminalReward = 0.f;
-//	    return collision_check();
+	    return collision_check();
 
         ///  if anymal falls down
         // raisim::Vec<3> base_position;

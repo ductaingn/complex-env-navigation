@@ -161,7 +161,7 @@ iteration_number = command_tracking_weight_path.rsplit('/', 1)[1].split('_', 1)[
 env.load_scaling(command_tracking_weight_dir, int(iteration_number))
 
 print("Ready to start training.")
-pdb.set_trace()
+# pdb.set_trace()
 
 for update in range(cfg["environment"]["max_n_update"]):
     start = time.time()
@@ -253,7 +253,7 @@ for update in range(cfg["environment"]["max_n_update"]):
             tracking_obs = np.concatenate((sample_user_command, obs[:, :proprioceptive_sensor_dim]), axis=1)
             tracking_obs = env.force_normalize_observation(tracking_obs, type=1)
             with torch.no_grad():
-                tracking_action = command_tracking_policy.architecture(torch.from_numpy(tracking_obs).to(device))
+                tracking_action = command_tracking_policy(torch.from_numpy(tracking_obs).to(device))
             _, dones = env.partial_step(tracking_action.cpu().detach().numpy())
 
             coordinate_obs = env.coordinate_observe()  # coordinate after taking step
@@ -413,7 +413,7 @@ for update in range(cfg["environment"]["max_n_update"]):
         tracking_obs = np.concatenate((sample_user_command, obs[:, :proprioceptive_sensor_dim]), axis=1)
         tracking_obs = env.force_normalize_observation(tracking_obs, type=1)
         with torch.no_grad():
-            tracking_action = command_tracking_policy.architecture(torch.from_numpy(tracking_obs).to(device))
+            tracking_action = command_tracking_policy(torch.from_numpy(tracking_obs).to(device))
         _, dones = env.partial_step(tracking_action.cpu().detach().numpy())
 
         coordinate_obs = env.coordinate_observe()  # coordinate after taking step
