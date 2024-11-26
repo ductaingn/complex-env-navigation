@@ -131,7 +131,7 @@ CVAE_training:
     n_latent_sample: 500
     learning_rate: 3e-4
     batch_size: 256 # 512
-    num_workers: 6
+    num_workers: 12
     shuffle_batch: True
     clip_gradient: False
     max_gradient_norm: 2.0

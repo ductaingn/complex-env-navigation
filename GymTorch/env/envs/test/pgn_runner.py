@@ -99,7 +99,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # directories
 task_path = os.path.dirname(os.path.realpath(__file__))
-home_path = task_path + "/../../../.."
+home_path = task_path + "~/ChargingRobot/raisim/raisimLib/complex-env-navigation"
 
 # config
 cfg = YAML().load(open(task_path + "/cfg.yaml", 'r'))

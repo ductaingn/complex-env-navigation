@@ -49,8 +49,8 @@ args = parser.parse_args()
 command_tracking_weight_path = args.tracking_weight
 
 # check if gpu is available
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
+# device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device='cpu'
 # directories
 task_path = os.path.dirname(os.path.realpath(__file__))
 home_path = task_path + "/../../../.."

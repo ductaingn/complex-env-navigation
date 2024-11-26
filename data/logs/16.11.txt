@@ -1,0 +1,987 @@
+ 290th iteration
+total:                                   0.133274
+reconstruction:                          0.131739
+kl posterior:                            0.001535
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   291th iteration
+total:                                   0.133232
+reconstruction:                          0.131652
+kl posterior:                            0.001580
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   292th iteration
+total:                                   0.133350
+reconstruction:                          0.131860
+kl posterior:                            0.001490
+Time: 9m 43s
+----------------------------------------------------
+
+----------------------------------------------------
+   293th iteration
+total:                                   0.133232
+reconstruction:                          0.131690
+kl posterior:                            0.001542
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   294th iteration
+total:                                   0.133166
+reconstruction:                          0.131666
+kl posterior:                            0.001501
+Time: 9m 47s
+----------------------------------------------------
+
+----------------------------------------------------
+   295th iteration
+total:                                   0.133066
+reconstruction:                          0.131456
+kl posterior:                            0.001610
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   296th iteration
+total:                                   0.133110
+reconstruction:                          0.131620
+kl posterior:                            0.001490
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   297th iteration
+total:                                   0.133206
+reconstruction:                          0.131644
+kl posterior:                            0.001562
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   298th iteration
+total:                                   0.133096
+reconstruction:                          0.131568
+kl posterior:                            0.001528
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   299th iteration
+total:                                   0.133098
+reconstruction:                          0.131565
+kl posterior:                            0.001533
+Time: 9m 45s
+----------------------------------------------------
+
+Evaluating the current CVAE model
+====================================================
+   300th evaluation
+total:                                   0.158589
+reconstruction:                          0.156858
+kl posterior:                            0.001731
+inference reconstruction:                0.491683
+minimum inference reconstruction:        0.186278
+====================================================
+
+----------------------------------------------------
+   300th iteration
+total:                                   0.132936
+reconstruction:                          0.131376
+kl posterior:                            0.001560
+Time: 9m 40s
+----------------------------------------------------
+
+----------------------------------------------------
+   301th iteration
+total:                                   0.133044
+reconstruction:                          0.131525
+kl posterior:                            0.001520
+Time: 9m 48s
+----------------------------------------------------
+
+----------------------------------------------------
+   302th iteration
+total:                                   0.132871
+reconstruction:                          0.131294
+kl posterior:                            0.001577
+Time: 9m 34s
+----------------------------------------------------
+
+----------------------------------------------------
+   303th iteration
+total:                                   0.133231
+reconstruction:                          0.131641
+kl posterior:                            0.001590
+Time: 9m 47s
+----------------------------------------------------
+
+----------------------------------------------------
+   304th iteration
+total:                                   0.133199
+reconstruction:                          0.131658
+kl posterior:                            0.001541
+Time: 9m 42s
+----------------------------------------------------
+
+----------------------------------------------------
+   305th iteration
+total:                                   0.133069
+reconstruction:                          0.131500
+kl posterior:                            0.001569
+Time: 9m 47s
+----------------------------------------------------
+
+----------------------------------------------------
+   306th iteration
+total:                                   0.132875
+reconstruction:                          0.131339
+kl posterior:                            0.001535
+Time: 9m 42s
+----------------------------------------------------
+
+----------------------------------------------------
+   307th iteration
+total:                                   0.132928
+reconstruction:                          0.131315
+kl posterior:                            0.001612
+Time: 9m 47s
+----------------------------------------------------
+
+----------------------------------------------------
+   308th iteration
+total:                                   0.132965
+reconstruction:                          0.131371
+kl posterior:                            0.001594
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   309th iteration
+total:                                   0.132882
+reconstruction:                          0.131308
+kl posterior:                            0.001573
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   310th iteration
+total:                                   0.132833
+reconstruction:                          0.131287
+kl posterior:                            0.001547
+Time: 9m 44s
+----------------------------------------------------
+
+----------------------------------------------------
+   311th iteration
+total:                                   0.132820
+reconstruction:                          0.131249
+kl posterior:                            0.001571
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   312th iteration
+total:                                   0.132814
+reconstruction:                          0.131293
+kl posterior:                            0.001521
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   313th iteration
+total:                                   0.132754
+reconstruction:                          0.131244
+kl posterior:                            0.001509
+Time: 9m 47s
+----------------------------------------------------
+
+----------------------------------------------------
+   314th iteration
+total:                                   0.132819
+reconstruction:                          0.131259
+kl posterior:                            0.001559
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   315th iteration
+total:                                   0.132751
+reconstruction:                          0.131083
+kl posterior:                            0.001668
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   316th iteration
+total:                                   0.132690
+reconstruction:                          0.131067
+kl posterior:                            0.001623
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   317th iteration
+total:                                   0.132848
+reconstruction:                          0.131286
+kl posterior:                            0.001562
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   318th iteration
+total:                                   0.132586
+reconstruction:                          0.131040
+kl posterior:                            0.001546
+Time: 9m 47s
+----------------------------------------------------
+
+----------------------------------------------------
+   319th iteration
+total:                                   0.132666
+reconstruction:                          0.131058
+kl posterior:                            0.001608
+Time: 9m 43s
+----------------------------------------------------
+
+----------------------------------------------------
+   320th iteration
+total:                                   0.132712
+reconstruction:                          0.131164
+kl posterior:                            0.001548
+Time: 9m 44s
+----------------------------------------------------
+
+----------------------------------------------------
+   321th iteration
+total:                                   0.132693
+reconstruction:                          0.130985
+kl posterior:                            0.001708
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   322th iteration
+total:                                   0.132444
+reconstruction:                          0.130822
+kl posterior:                            0.001622
+Time: 9m 47s
+----------------------------------------------------
+
+----------------------------------------------------
+   323th iteration
+total:                                   0.132770
+reconstruction:                          0.131142
+kl posterior:                            0.001628
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   324th iteration
+total:                                   0.132586
+reconstruction:                          0.131016
+kl posterior:                            0.001571
+Time: 9m 46s
+----------------------------------------------------
+
+Evaluating the current CVAE model
+====================================================
+   325th evaluation
+total:                                   0.164818
+reconstruction:                          0.163211
+kl posterior:                            0.001607
+inference reconstruction:                0.511152
+minimum inference reconstruction:        0.194453
+====================================================
+
+----------------------------------------------------
+   325th iteration
+total:                                   0.132682
+reconstruction:                          0.131078
+kl posterior:                            0.001604
+Time: 9m 41s
+----------------------------------------------------
+
+----------------------------------------------------
+   326th iteration
+total:                                   0.132577
+reconstruction:                          0.131001
+kl posterior:                            0.001577
+Time: 9m 48s
+----------------------------------------------------
+
+----------------------------------------------------
+   327th iteration
+total:                                   0.132608
+reconstruction:                          0.131003
+kl posterior:                            0.001605
+Time: 9m 38s
+----------------------------------------------------
+
+----------------------------------------------------
+   328th iteration
+total:                                   0.132580
+reconstruction:                          0.131009
+kl posterior:                            0.001571
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   329th iteration
+total:                                   0.132480
+reconstruction:                          0.130848
+kl posterior:                            0.001632
+Time: 9m 43s
+----------------------------------------------------
+
+----------------------------------------------------
+   330th iteration
+total:                                   0.132525
+reconstruction:                          0.130870
+kl posterior:                            0.001655
+Time: 9m 47s
+----------------------------------------------------
+
+----------------------------------------------------
+   331th iteration
+total:                                   0.132462
+reconstruction:                          0.130851
+kl posterior:                            0.001611
+Time: 9m 43s
+----------------------------------------------------
+
+----------------------------------------------------
+   332th iteration
+total:                                   0.132304
+reconstruction:                          0.130781
+kl posterior:                            0.001523
+Time: 9m 47s
+----------------------------------------------------
+
+----------------------------------------------------
+   333th iteration
+total:                                   0.132123
+reconstruction:                          0.130503
+kl posterior:                            0.001620
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   334th iteration
+total:                                   0.132329
+reconstruction:                          0.130703
+kl posterior:                            0.001626
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   335th iteration
+total:                                   0.132125
+reconstruction:                          0.130559
+kl posterior:                            0.001566
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   336th iteration
+total:                                   0.132390
+reconstruction:                          0.130760
+kl posterior:                            0.001630
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   337th iteration
+total:                                   0.132260
+reconstruction:                          0.130675
+kl posterior:                            0.001585
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   338th iteration
+total:                                   0.132251
+reconstruction:                          0.130633
+kl posterior:                            0.001618
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   339th iteration
+total:                                   0.132428
+reconstruction:                          0.130799
+kl posterior:                            0.001629
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   340th iteration
+total:                                   0.132199
+reconstruction:                          0.130542
+kl posterior:                            0.001657
+Time: 9m 47s
+----------------------------------------------------
+
+----------------------------------------------------
+   341th iteration
+total:                                   0.132168
+reconstruction:                          0.130522
+kl posterior:                            0.001645
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   342th iteration
+total:                                   0.132203
+reconstruction:                          0.130616
+kl posterior:                            0.001587
+Time: 9m 42s
+----------------------------------------------------
+
+----------------------------------------------------
+   343th iteration
+total:                                   0.132063
+reconstruction:                          0.130441
+kl posterior:                            0.001623
+Time: 9m 44s
+----------------------------------------------------
+
+----------------------------------------------------
+   344th iteration
+total:                                   0.132153
+reconstruction:                          0.130562
+kl posterior:                            0.001591
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   345th iteration
+total:                                   0.132148
+reconstruction:                          0.130448
+kl posterior:                            0.001700
+Time: 9m 44s
+----------------------------------------------------
+
+----------------------------------------------------
+   346th iteration
+total:                                   0.132004
+reconstruction:                          0.130415
+kl posterior:                            0.001589
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   347th iteration
+total:                                   0.132147
+reconstruction:                          0.130548
+kl posterior:                            0.001599
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   348th iteration
+total:                                   0.132021
+reconstruction:                          0.130392
+kl posterior:                            0.001629
+Time: 9m 47s
+----------------------------------------------------
+
+----------------------------------------------------
+   349th iteration
+total:                                   0.132047
+reconstruction:                          0.130409
+kl posterior:                            0.001638
+Time: 9m 42s
+----------------------------------------------------
+
+Evaluating the current CVAE model
+====================================================
+   350th evaluation
+total:                                   0.158691
+reconstruction:                          0.157225
+kl posterior:                            0.001466
+inference reconstruction:                0.486827
+minimum inference reconstruction:        0.187705
+====================================================
+
+----------------------------------------------------
+   350th iteration
+total:                                   0.131951
+reconstruction:                          0.130326
+kl posterior:                            0.001625
+Time: 9m 40s
+----------------------------------------------------
+
+----------------------------------------------------
+   351th iteration
+total:                                   0.132083
+reconstruction:                          0.130474
+kl posterior:                            0.001609
+Time: 9m 47s
+----------------------------------------------------
+
+----------------------------------------------------
+   352th iteration
+total:                                   0.132082
+reconstruction:                          0.130427
+kl posterior:                            0.001655
+Time: 9m 36s
+----------------------------------------------------
+
+----------------------------------------------------
+   353th iteration
+total:                                   0.132025
+reconstruction:                          0.130357
+kl posterior:                            0.001667
+Time: 9m 48s
+----------------------------------------------------
+
+----------------------------------------------------
+   354th iteration
+total:                                   0.131717
+reconstruction:                          0.130094
+kl posterior:                            0.001624
+Time: 9m 42s
+----------------------------------------------------
+
+----------------------------------------------------
+   355th iteration
+total:                                   0.132129
+reconstruction:                          0.130432
+kl posterior:                            0.001696
+Time: 9m 48s
+----------------------------------------------------
+
+----------------------------------------------------
+   356th iteration
+total:                                   0.131971
+reconstruction:                          0.130338
+kl posterior:                            0.001633
+Time: 9m 42s
+----------------------------------------------------
+
+----------------------------------------------------
+   357th iteration
+total:                                   0.131751
+reconstruction:                          0.130096
+kl posterior:                            0.001655
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   358th iteration
+total:                                   0.131942
+reconstruction:                          0.130350
+kl posterior:                            0.001592
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   359th iteration
+total:                                   0.131824
+reconstruction:                          0.130189
+kl posterior:                            0.001634
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   360th iteration
+total:                                   0.132025
+reconstruction:                          0.130295
+kl posterior:                            0.001730
+Time: 9m 44s
+----------------------------------------------------
+
+----------------------------------------------------
+   361th iteration
+total:                                   0.131683
+reconstruction:                          0.129966
+kl posterior:                            0.001717
+Time: 9m 44s
+----------------------------------------------------
+
+----------------------------------------------------
+   362th iteration
+total:                                   0.131724
+reconstruction:                          0.130004
+kl posterior:                            0.001720
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   363th iteration
+total:                                   0.131885
+reconstruction:                          0.130197
+kl posterior:                            0.001688
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   364th iteration
+total:                                   0.131764
+reconstruction:                          0.130144
+kl posterior:                            0.001621
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   365th iteration
+total:                                   0.131759
+reconstruction:                          0.130088
+kl posterior:                            0.001671
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   366th iteration
+total:                                   0.131654
+reconstruction:                          0.130059
+kl posterior:                            0.001595
+Time: 9m 44s
+----------------------------------------------------
+
+----------------------------------------------------
+   367th iteration
+total:                                   0.131797
+reconstruction:                          0.130093
+kl posterior:                            0.001705
+Time: 9m 44s
+----------------------------------------------------
+
+----------------------------------------------------
+   368th iteration
+total:                                   0.131743
+reconstruction:                          0.130068
+kl posterior:                            0.001674
+Time: 9m 46s
+----------------------------------------------------
+
+----------------------------------------------------
+   369th iteration
+total:                                   0.131548
+reconstruction:                          0.129916
+kl posterior:                            0.001632
+Time: 9m 47s
+----------------------------------------------------
+
+----------------------------------------------------
+   370th iteration
+total:                                   0.131494
+reconstruction:                          0.129780
+kl posterior:                            0.001714
+Time: 9m 48s
+----------------------------------------------------
+
+----------------------------------------------------
+   371th iteration
+total:                                   0.131560
+reconstruction:                          0.129925
+kl posterior:                            0.001636
+Time: 9m 48s
+----------------------------------------------------
+
+----------------------------------------------------
+   372th iteration
+total:                                   0.131652
+reconstruction:                          0.129991
+kl posterior:                            0.001661
+Time: 9m 38s
+----------------------------------------------------
+
+----------------------------------------------------
+   373th iteration
+total:                                   0.131477
+reconstruction:                          0.129788
+kl posterior:                            0.001689
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   374th iteration
+total:                                   0.131604
+reconstruction:                          0.129933
+kl posterior:                            0.001671
+Time: 9m 48s
+----------------------------------------------------
+
+Evaluating the current CVAE model
+====================================================
+   375th evaluation
+total:                                   0.153285
+reconstruction:                          0.151775
+kl posterior:                            0.001510
+inference reconstruction:                0.499206
+minimum inference reconstruction:        0.179881
+====================================================
+
+----------------------------------------------------
+   375th iteration
+total:                                   0.131653
+reconstruction:                          0.129902
+kl posterior:                            0.001751
+Time: 9m 49s
+----------------------------------------------------
+
+----------------------------------------------------
+   376th iteration
+total:                                   0.131484
+reconstruction:                          0.129810
+kl posterior:                            0.001674
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   377th iteration
+total:                                   0.131516
+reconstruction:                          0.129850
+kl posterior:                            0.001666
+Time: 9m 47s
+----------------------------------------------------
+
+----------------------------------------------------
+   378th iteration
+total:                                   0.131359
+reconstruction:                          0.129744
+kl posterior:                            0.001615
+Time: 9m 45s
+----------------------------------------------------
+
+----------------------------------------------------
+   379th iteration
+total:                                   0.131551
+reconstruction:                          0.129907
+kl posterior:                            0.001643
+Time: 9m 46s
+----------------------------------------------------
+
+^CTraceback (most recent call last):
+  File "/home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/ITS_train.py", line 303, in <module>
+    loss.backward()
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/_tensor.py", line 307, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/autograd/__init__.py", line 154, in backward
+    Variable._execution_engine.run_backward(
+KeyboardInterrupt
+
+(quadruped_nav) (base) chargingrobot@VUNI-H101:~/ChargingRobot/raisim/raisimLib/complex-env-navigation$ python raisimGymTorch/env/envs/train
+/FDM_train.py -tw ~/ChargingRobot/raisim/raisimLib/complex-env-navigation/data/command_tracking_flat/final/full_16200.pt
+python: can't open file 'raisimGymTorch/env/envs/train/FDM_train.py': [Errno 2] No such file or directory
+(quadruped_nav) (base) chargingrobot@VUNI-H101:~/ChargingRobot/raisim/raisimLib/complex-env-navigation$ python GymTorch/env/envs/train/FDM_t
+rain.py -tw ~/ChargingRobot/raisim/raisimLib/complex-env-navigation/data/command_tracking_flat/final/full_16200.pt
+Ready to start training.
+> /home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/FDM_train.py(166)<module>()
+-> for update in range(cfg["environment"]["max_n_update"]):
+(Pdb) c
+Evaluating the current environment model
+Traceback (most recent call last):
+  File "GymTorch/env/envs/train/FDM_train.py", line 166, in <module>
+    for update in range(cfg["environment"]["max_n_update"]):
+  File "/home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/trainer.py", line 365, in evaluate
+    predicted_P_cols, predicted_coordinates = environment_model(torch.from_numpy(new_state).to(self.device),
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/model.py", line 112, in forward
+    transformer_output = self.transformer_encoder(transformer_input)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/transformer.py", line 198, in forward
+    output = mod(output, src_mask=mask, src_key_padding_mask=src_key_padding_mask)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/transformer.py", line 339, in forward
+    x = self.norm1(x + self._sa_block(x, src_mask, src_key_padding_mask))
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/transformer.py", line 347, in _sa_block
+    x = self.self_attn(x, x, x,
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/activation.py", line 1003, in forward
+    attn_output, attn_output_weights = F.multi_head_attention_forward(
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/functional.py", line 4969, in multi_head_attention_forward
+    assert embed_dim == embed_dim_to_check, \
+AssertionError: was expecting embedding dimension of 256, but got 100
+(quadruped_nav) (base) chargingrobot@VUNI-H101:~/ChargingRobot/raisim/raisimLib/complex-env-navigation$ python GymTorch/env/envs/train/FDM_train.py -tw ~/ChargingRobot/raisim/raisimLib/complex-env-navigation/data/command_tracking_flat/final/full_16200.pt
+Ready to start training.
+> /home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/FDM_train.py(166)<module>()
+-> for update in range(cfg["environment"]["max_n_update"]):
+(Pdb) c
+Evaluating the current environment model
+Traceback (most recent call last):
+  File "GymTorch/env/envs/train/FDM_train.py", line 166, in <module>
+    for update in range(cfg["environment"]["max_n_update"]):
+  File "/home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/trainer.py", line 365, in evaluate
+    predicted_P_cols, predicted_coordinates = environment_model(torch.from_numpy(new_state).to(self.device),
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/model.py", line 116, in forward
+    transformer_output = self.transformer_encoder(transformer_input)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/transformer.py", line 198, in forward
+    output = mod(output, src_mask=mask, src_key_padding_mask=src_key_padding_mask)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/transformer.py", line 339, in forward
+    x = self.norm1(x + self._sa_block(x, src_mask, src_key_padding_mask))
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/transformer.py", line 347, in _sa_block
+    x = self.self_attn(x, x, x,
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/activation.py", line 1003, in forward
+    attn_output, attn_output_weights = F.multi_head_attention_forward(
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/functional.py", line 5101, in multi_head_attention_forward
+    attn_output, attn_output_weights = _scaled_dot_product_attention(q, k, v, attn_mask, dropout_p)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/functional.py", line 4844, in _scaled_dot_product_attention
+    attn = torch.bmm(q, k.transpose(-2, -1))
+RuntimeError: CUDA out of memory. Tried to allocate 11.22 GiB (GPU 0; 5.99 GiB total capacity; 598.20 MiB already allocated; 2.58 GiB free; 794.00 MiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+(quadruped_nav) (base) chargingrobot@VUNI-H101:~/ChargingRobot/raisim/raisimLib/complex-env-navigation$ python GymTorch/env/envs/train/FDM_train.py -tw ~/ChargingRobot/raisim/raisimLib/complex-env-navigation/data/command_tracking_flat/final/full_16200.pt
+Traceback (most recent call last):
+  File "GymTorch/env/envs/train/FDM_train.py", line 113, in <module>
+    environment_model = Forward_Dynamics_Model(state_encoding_config=cfg["architecture"]["state_encoder"],
+TypeError: __init__() got an unexpected keyword argument 'device'
+(quadruped_nav) (base) chargingrobot@VUNI-H101:~/ChargingRobot/raisim/raisimLib/complex-env-navigation$ python GymTorch/env/envs/train/FDM_train.py -tw ~/ChargingRobot/raisim/raisimLib/complex-env-navigation/data/command_tracking_flat/final/full_16200.pt
+Ready to start training.
+> /home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/FDM_train.py(166)<module>()
+-> for update in range(cfg["environment"]["max_n_update"]):
+(Pdb) c
+Evaluating the current environment model
+Traceback (most recent call last):
+  File "GymTorch/env/envs/train/FDM_train.py", line 166, in <module>
+    for update in range(cfg["environment"]["max_n_update"]):
+  File "/home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/trainer.py", line 365, in evaluate
+    predicted_P_cols, predicted_coordinates = environment_model(torch.from_numpy(new_state).to(self.device),
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/model.py", line 117, in forward
+    transformer_output = self.transformer_encoder(transformer_input)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/transformer.py", line 198, in forward
+    output = mod(output, src_mask=mask, src_key_padding_mask=src_key_padding_mask)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/transformer.py", line 339, in forward
+    x = self.norm1(x + self._sa_block(x, src_mask, src_key_padding_mask))
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/transformer.py", line 347, in _sa_block
+    x = self.self_attn(x, x, x,
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/activation.py", line 1003, in forward
+    attn_output, attn_output_weights = F.multi_head_attention_forward(
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/functional.py", line 5101, in multi_head_attention_forward
+    attn_output, attn_output_weights = _scaled_dot_product_attention(q, k, v, attn_mask, dropout_p)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/functional.py", line 4844, in _scaled_dot_product_attention
+    attn = torch.bmm(q, k.transpose(-2, -1))
+RuntimeError: CUDA out of memory. Tried to allocate 11.22 GiB (GPU 0; 5.99 GiB total capacity; 598.20 MiB already allocated; 2.58 GiB free; 794.00 MiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+(quadruped_nav) (base) chargingrobot@VUNI-H101:~/ChargingRobot/raisim/raisimLib/complex-env-navigation$ python GymTorch/env/envs/train/FDM_train.py -tw ~/ChargingRobot/raisim/raisimLib/complex-env-navigation/data/command_tracking_flat/final/full_16200.pt
+Ready to start training.
+> /home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/FDM_train.py(166)<module>()
+-> for update in range(cfg["environment"]["max_n_update"]):
+(Pdb) c
+Evaluating the current environment model
+Killed
+(quadruped_nav) (base) chargingrobot@VUNI-H101:~/ChargingRobot/raisim/raisimLib/complex-env-navigation$ python GymTorch/env/envs/train/FDM_train.py -tw ~/ChargingRobot/raisim/raisimLib/complex-env-navigation/data/command_tracking_flat/final/full_16200.pt
+Ready to start training.
+> /home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/FDM_train.py(166)<module>()
+-> for update in range(cfg["environment"]["max_n_update"]):
+(Pdb) c
+Evaluating the current environment model
+Killed
+(quadruped_nav) (base) chargingrobot@VUNI-H101:~/ChargingRobot/raisim/raisimLib/complex-env-navigation$ python GymTorch/env/envs/train/FDM_train.py -tw ~/ChargingRobot/raisim/raisimLib/complex-env-navigation/data/command_tracking_flat/final/full_16200.pt
+Ready to start training.
+> /home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/FDM_train.py(166)<module>()
+-> for update in range(cfg["environment"]["max_n_update"]):
+(Pdb) q
+Traceback (most recent call last):
+  File "GymTorch/env/envs/train/FDM_train.py", line 166, in <module>
+    for update in range(cfg["environment"]["max_n_update"]):
+  File "GymTorch/env/envs/train/FDM_train.py", line 166, in <module>
+    for update in range(cfg["environment"]["max_n_update"]):
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/bdb.py", line 88, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/bdb.py", line 113, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit
+(quadruped_nav) (base) chargingrobot@VUNI-H101:~/ChargingRobot/raisim/raisimLib/complex-env-navigation$ python GymTorch/env/envs/train/FDM_train.py -tw ~/ChargingRobot/raisim/raisimLib/complex-env-navigation/data/command_tracking_flat/final/full_16200.pt
+Ready to start training.
+> /home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/FDM_train.py(166)<module>()
+-> for update in range(cfg["environment"]["max_n_update"]):
+(Pdb) c
+Evaluating the current environment model
+Traceback (most recent call last):
+  File "GymTorch/env/envs/train/FDM_train.py", line 166, in <module>
+    for update in range(cfg["environment"]["max_n_update"]):
+  File "/home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/trainer.py", line 365, in evaluate
+    predicted_P_cols, predicted_coordinates = environment_model(torch.from_numpy(new_state).to(self.device),
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/model.py", line 124, in forward
+    encoded_prediction = encoded_prediction.view(-1, encoded_prediction_dim)
+RuntimeError: view size is not compatible with input tensor's size and stride (at least one dimension spans across two contiguous subspaces). Use .reshape(...) instead.
+(quadruped_nav) (base) chargingrobot@VUNI-H101:~/ChargingRobot/raisim/raisimLib/complex-env-navigation$ python GymTorch/env/envs/train/FDM_train.py -tw ~/ChargingRobot/raisim/raisimLib/complex-env-navigation/data/command_tracking_flat/final/full_16200.pt
+Ready to start training.
+> /home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/FDM_train.py(166)<module>()
+-> for update in range(cfg["environment"]["max_n_update"]):
+(Pdb) c
+Evaluating the current environment model
+Traceback (most recent call last):
+  File "GymTorch/env/envs/train/FDM_train.py", line 166, in <module>
+    for update in range(cfg["environment"]["max_n_update"]):
+  File "/home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/trainer.py", line 365, in evaluate
+    predicted_P_cols, predicted_coordinates = environment_model(torch.from_numpy(new_state).to(self.device),
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+TypeError: _forward_unimplemented() got an unexpected keyword argument 'training'
+(quadruped_nav) (base) chargingrobot@VUNI-H101:~/ChargingRobot/raisim/raisimLib/complex-env-navigation$ python GymTorch/env/envs/train/FDM_train.py -tw ~/ChargingRobot/raisim/raisimLib/complex-env-navigation/data/command_tracking_flat/final/full_16200.pt
+Ready to start training.
+> /home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/FDM_train.py(166)<module>()
+-> for update in range(cfg["environment"]["max_n_update"]):
+(Pdb) c
+Evaluating the current environment model
+Traceback (most recent call last):
+  File "GymTorch/env/envs/train/FDM_train.py", line 166, in <module>
+    for update in range(cfg["environment"]["max_n_update"]):
+  File "/home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/trainer.py", line 365, in evaluate
+    predicted_P_cols, predicted_coordinates = environment_model(torch.from_numpy(new_state).to(self.device),
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+TypeError: _forward_unimplemented() got an unexpected keyword argument 'training'
+(quadruped_nav) (base) chargingrobot@VUNI-H101:~/ChargingRobot/raisim/raisimLib/complex-env-navigation$ python GymTorch/env/envs/train/FDM_train.py -tw ~/ChargingRobot/raisim/raisimLib/complex-env-navigation/data/command_tracking_flat/final/full_16200.pt
+Ready to start training.
+> /home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/FDM_train.py(166)<module>()
+-> for update in range(cfg["environment"]["max_n_update"]):
+(Pdb) c
+Evaluating the current environment model
+Traceback (most recent call last):
+  File "GymTorch/env/envs/train/FDM_train.py", line 166, in <module>
+    for update in range(cfg["environment"]["max_n_update"]):
+  File "/home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/trainer.py", line 365, in evaluate
+    predicted_P_cols, predicted_coordinates = environment_model(torch.from_numpy(new_state).to(self.device),
+  File "/home/chargingrobot/anaconda3/envs/quadruped_nav/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/model.py", line 124, in forward
+    encoded_prediction = encoded_prediction.view(-1, encoded_prediction_dim)
+RuntimeError: view size is not compatible with input tensor's size and stride (at least one dimension spans across two contiguous subspaces). Use .reshape(...) instead.
+(quadruped_nav) (base) chargingrobot@VUNI-H101:~/ChargingRobot/raisim/raisimLib/complex-env-navigation$ python GymTorch/env/envs/train/FDM_train.py -tw ~/ChargingRobot/raisim/raisimLib/complex-env-navigation/data/command_tracking_flat/final/full_16200.pt
+Ready to start training.
+> /home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/envs/train/FDM_train.py(166)<module>()
+-> for update in range(cfg["environment"]["max_n_update"]):
+(Pdb) c
+Evaluating the current environment model
+====================================================
+     0th evaluation
+total collision accuracy:                0.398021
+collision accuracy:                      1.000000
+no collision accuracy:                   0.000000
+coordinate error:                        14.605333
+====================================================
+
+Sample new environment
+^C
+Program interrupted. (Use 'cont' to resume).
+> /home/chargingrobot/ChargingRobot/raisim/raisimLib/complex-env-navigation/GymTorch/env/RaisimGymVecEnv.py(70)partial_step()
+-> return self._reward.copy(), self._done.copy()
+(Pdb) c
+  
