@@ -214,7 +214,7 @@ namespace raisim
 
             /// add objects
             husky_ = world_->addArticulatedSystem(resourceDir_ + "/husky/husky.urdf");
-            husky_->setName("anymal");
+            husky_->setName("husky");
             husky_->setControlMode(raisim::ControlMode::PD_PLUS_FEEDFORWARD_TORQUE);
 
             /// get robot data
@@ -292,12 +292,12 @@ namespace raisim
 
             /// indices of links that could make contact
             footIndices_.insert(husky_->getBodyIdx("front_left_wheel"));
-            footIndices_.insert(husky_->getBodyIdx("front_right_SHANK"));
+            footIndices_.insert(husky_->getBodyIdx("front_right_wheel"));
             footIndices_.insert(husky_->getBodyIdx("rear_left_wheel"));
             footIndices_.insert(husky_->getBodyIdx("rear_right_wheel"));
             if (!harsh_collision) {
                 footIndices_.insert(husky_->getBodyIdx("front_left_wheel"));
-                footIndices_.insert(husky_->getBodyIdx("front_right_SHANK"));
+                footIndices_.insert(husky_->getBodyIdx("front_right_wheel"));
                 footIndices_.insert(husky_->getBodyIdx("rear_left_wheel"));
                 footIndices_.insert(husky_->getBodyIdx("rear_right_wheel"));
             }

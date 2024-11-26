@@ -156,8 +156,8 @@ COM_buffer = Buffer(env.num_envs, COM_history_time_step, COM_feature_dim)
 assert command_tracking_weight_path != '', "Pre-trained command tracking policy weight path should be determined."
 # command_tracking_policy = ppo_module.MLP(cfg['command_tracking']['architecture'], nn.LeakyReLU,
                                         #  command_tracking_ob_dim, command_tracking_act_dim)
-command_tracking_policy = nn.Linear(command_tracking_ob_dim, command_tracking_act_dim)
-# command_tracking_policy.load_state_dict(torch.load(command_tracking_weight_path, map_location=device)['actor_architecture_state_dict'])
+command_tracking_policy = nn.Sequential(nn.Linear(84,128,), nn.LeakyReLU(), nn.Linear(128,32), nn.LeakyReLU(), nn.Linear(32,4))
+command_tracking_policy.load_state_dict(torch.load(command_tracking_weight_path, map_location=device))
 command_tracking_policy.to(device)
 command_tracking_weight_dir = command_tracking_weight_path.rsplit('/', 1)[0] + '/'
 iteration_number = command_tracking_weight_path.rsplit('/', 1)[1].split('_', 1)[1].rsplit('.', 1)[0]
@@ -279,6 +279,7 @@ for grid_size in [2.3, 3., 4., 5.]:
             env.reset()
             action_planner.reset()
             goal_position = env.set_goal()[np.newaxis, :]
+            print(n_path_failure)
             COM_buffer.reset()
 
             # Initialize
@@ -440,9 +441,7 @@ for grid_size in [2.3, 3., 4., 5.]:
 
                         # simulate optimized command sequence
                         state = state[0, :][np.newaxis, :]
-                        predicted_P_cols, predicted_coordinates = loaded_environment_model(torch.from_numpy(state).to(device),
-                                                                                           torch.from_numpy(sample_user_command_traj[:, np.newaxis, :]).to(device),
-                                                                                           training=False)
+                        predicted_P_cols, predicted_coordinates = loaded_environment_model(torch.from_numpy(state).to(device),                                                            torch.from_numpy(sample_user_command_traj[:, np.newaxis, :]).to(device),training=False)
 
                         # Hard constraint for collision
                         predicted_P_cols = np.squeeze(predicted_P_cols, axis=-1)

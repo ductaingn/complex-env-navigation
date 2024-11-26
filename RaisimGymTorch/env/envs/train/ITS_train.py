@@ -3,9 +3,9 @@ from ruamel.yaml import YAML
 import torch
 from torch.utils.data import DataLoader
 import torch.optim as optim
-from raisimGymTorch.env.envs.train.model import Informed_Trajectory_Sampler_training, Informed_Trajectory_Sampler_inference
-from raisimGymTorch.env.envs.train.trainer import ITS_dataset, make_batch_all
-from raisimGymTorch.helper.raisim_gym_helper import ConfigurationSaver
+from RaisimGymTorch.env.envs.train.model import Informed_Trajectory_Sampler_training, Informed_Trajectory_Sampler_inference
+from RaisimGymTorch.env.envs.train.trainer import ITS_dataset, make_batch_all
+from RaisimGymTorch.helper.raisim_gym_helper import ConfigurationSaver
 import wandb
 import pdb
 import os
@@ -35,7 +35,8 @@ args = parser.parse_args()
 FDM_weight_path = args.fdm_weight
 
 # check if gpu is available
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+# device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device = torch.device('cpu')
 # torch.backends.cudnn.benchmark = True
 
 # directories
@@ -124,7 +125,7 @@ if cfg["logging"]:
     # wandb.watch(cvae_train_model, log='all', log_freq=150)
 
 print("Ready to start.")
-pdb.set_trace()
+# pdb.set_trace()
 
 for epoch in range(cfg["CVAE_training"]["command"]["num_epochs"]):
     if epoch % cfg["CVAE_training"]["command"]["evaluate_period"] == 0:
@@ -334,7 +335,3 @@ for epoch in range(cfg["CVAE_training"]["command"]["num_epochs"]):
     print('{:<40} {:>6}'.format("kl posterior: ", '{:0.6f}'.format(mean_KL_posterior_loss)))
     print(f'Time: {elaspe_time_minutes}m {elapse_time_seconds}s')
     print('----------------------------------------------------\n')
-
-
-
-

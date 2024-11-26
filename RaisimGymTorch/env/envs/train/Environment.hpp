@@ -368,13 +368,13 @@ namespace raisim {
                                       hm_raw_value);
 
             /// add objects
-            anymal_ = world_->addArticulatedSystem(resourceDir_ + "/husky/husky.urdf");
-            anymal_->setName("anymal");
-            anymal_->setControlMode(raisim::ControlMode::PD_PLUS_FEEDFORWARD_TORQUE);
+            husky_ = world_->addArticulatedSystem(resourceDir_ + "/husky/husky.urdf");
+            husky_->setName("husky");
+            husky_->setControlMode(raisim::ControlMode::PD_PLUS_FEEDFORWARD_TORQUE);
 
             /// get robot data
-            gcDim_ = anymal_->getGeneralizedCoordinateDim(); // 3(base position) + 4(base orientation) + 12(joint position) = 19
-            gvDim_ = anymal_->getDOF();                      // 3(base linear velocity) + 3(base angular velocity) + 12(joint velocity) = 18
+            gcDim_ = husky_->getGeneralizedCoordinateDim(); // 3(base position) + 4(base orientation) + 12(joint position) = 19
+            gvDim_ = husky_->getDOF();                      // 3(base linear velocity) + 3(base angular velocity) + 12(joint velocity) = 18
             nJoints_ = gvDim_ - 6;                           // 12
 
             /// set depth sensor (lidar)
@@ -411,9 +411,9 @@ namespace raisim {
                 }
             }
 
-            /// nominal configuration of anymal_c
-            gc_init_
-                    << 0, 0, 0.7, 1.0, 0.0, 0.0, 0.0, 0.03, 0.5, -0.9, -0.03, 0.5, -0.9, 0.03, -0.5, 0.9, -0.03, -0.5, 0.9;  //0.5
+            /// nominal configuration of husky_c
+            // gc_init_
+            //         << 0, 0, 0.7, 1.0, 0.0, 0.0, 0.0, 0.03, 0.5, -0.9, -0.03, 0.5, -0.9, 0.03, -0.5, 0.9, -0.03, -0.5, 0.9;  //0.5
             random_gc_init = gc_init_;
             random_gv_init = gv_init_;
 
@@ -423,8 +423,8 @@ namespace raisim {
             jointPgain.tail(nJoints_).setConstant(50.0);
             jointDgain.setZero();
             jointDgain.tail(nJoints_).setConstant(0.2);
-            anymal_->setPdGains(jointPgain, jointDgain);
-            anymal_->setGeneralizedForce(Eigen::VectorXd::Zero(gvDim_));
+            husky_->setPdGains(jointPgain, jointDgain);
+            husky_->setGeneralizedForce(Eigen::VectorXd::Zero(gvDim_));
 
             /// MUST BE DONE FOR ALL ENVIRONMENTS
             obDim_ = 81 + scanSize;
@@ -443,20 +443,20 @@ namespace raisim {
 
             /// analytic planner
             if (analytic_planner_run) {
-                anymal_sphere_ = world_->addSphere(0.55, 1, "default", raisim::COLLISION(2),
+                husky_sphere_ = world_->addSphere(0.55, 1, "default", raisim::COLLISION(2),
                                                    RAISIM_STATIC_COLLISION_GROUP);
-                anymal_sphere_->setName("anymal_sphere");
+                husky_sphere_->setName("husky_sphere");
             }
 
             /// indices of links that could make contact
-            footIndices_.insert(anymal_->getBodyIdx("LF_SHANK"));
-            footIndices_.insert(anymal_->getBodyIdx("RF_SHANK"));
-            footIndices_.insert(anymal_->getBodyIdx("LH_SHANK"));
-            footIndices_.insert(anymal_->getBodyIdx("RH_SHANK"));
-//            footIndices_.insert(anymal_->getBodyIdx("LF_THIGH"));
-//            footIndices_.insert(anymal_->getBodyIdx("RF_THIGH"));
-//            footIndices_.insert(anymal_->getBodyIdx("LH_THIGH"));
-//            footIndices_.insert(anymal_->getBodyIdx("RH_THIGH"));
+            footIndices_.insert(husky_->getBodyIdx("front_left_wheel"));
+            footIndices_.insert(husky_->getBodyIdx("front_right_wheel"));
+            footIndices_.insert(husky_->getBodyIdx("rear_left_wheel"));
+            footIndices_.insert(husky_->getBodyIdx("rear_right_wheel"));
+//            footIndices_.insert(husky_->getBodyIdx("LF_THIGH"));
+//            footIndices_.insert(husky_->getBodyIdx("RF_THIGH"));
+//            footIndices_.insert(husky_->getBodyIdx("LH_THIGH"));
+//            footIndices_.insert(husky_->getBodyIdx("RH_THIGH"));
 
             /// visualize if it is the first environment
             if (visualizable_) {
@@ -489,7 +489,7 @@ namespace raisim {
                     }
                 }
 
-                server_->focusOn(anymal_);
+                server_->focusOn(husky_);
             }
 
         }
@@ -523,10 +523,10 @@ namespace raisim {
 
                     current_random_gc_init = random_gc_init;
                     current_random_gv_init = random_gv_init;
-                    anymal_->setState(random_gc_init, random_gv_init);
+                    husky_->setState(random_gc_init, random_gv_init);
                     initHistory();
                 } else {
-                    anymal_->setState(current_random_gc_init, current_random_gv_init);
+                    husky_->setState(current_random_gc_init, current_random_gv_init);
                     initHistory();
                 }
             } else if (point_goal_initialize || CVAE_data_collection_initialize) {
@@ -552,14 +552,14 @@ namespace raisim {
 
                     current_random_gc_init = random_gc_init;
                     current_random_gv_init = random_gv_init;
-                    anymal_->setState(random_gc_init, random_gv_init);
+                    husky_->setState(random_gc_init, random_gv_init);
                     initHistory();
                 } else {
-                    anymal_->setState(current_random_gc_init, current_random_gv_init);
+                    husky_->setState(current_random_gc_init, current_random_gv_init);
                     initHistory();
                 }
             } else {
-                anymal_->setState(gc_init_, gv_init_);
+                husky_->setState(gc_init_, gv_init_);
                 initHistory();
             }
 
@@ -578,7 +578,7 @@ namespace raisim {
             Eigen::VectorXd current_joint_position_error = pTarget12_ - gc_.tail(nJoints_);
             updateHistory(current_joint_position_error, gv_.tail(nJoints_));
 
-            anymal_->setPdTarget(pTarget_, vTarget_);
+            husky_->setPdTarget(pTarget_, vTarget_);
 
 
             for (int i = 0; i < int(control_dt_ / simulation_dt_ + 1e-10); i++) {
@@ -597,7 +597,7 @@ namespace raisim {
         void updateObservation() {
             std::normal_distribution<> lidar_noise(0., 0.2);
 
-            anymal_->getState(gc_, gv_);
+            husky_->getState(gc_, gv_);
             raisim::Vec<4> quat;
             raisim::Mat<3, 3> rot;
             quat[0] = gc_[3];
@@ -611,8 +611,8 @@ namespace raisim {
             /// Get depth data
             raisim::Vec<3> lidarPos;
             raisim::Mat<3, 3> lidarOri;
-            anymal_->getFramePosition("lidar_cage_to_lidar", lidarPos);
-            anymal_->getFrameOrientation("lidar_cage_to_lidar", lidarOri);
+            husky_->getFramePosition("lidar_cage_to_lidar", lidarPos);
+            husky_->getFrameOrientation("lidar_cage_to_lidar", lidarOri);
             double ray_length = 10.;
             Eigen::Vector3d direction;
             Eigen::Vector3d rayDirection;
@@ -773,10 +773,10 @@ namespace raisim {
         void computed_heading_direction(Eigen::Ref<EigenVec> heading_direction_) {}
 
         bool analytic_planner_collision_check(double x, double y) {
-            anymal_sphere_->setPosition(x, y, 1.0);
+            husky_sphere_->setPosition(x, y, 1.0);
             world_->integrate1();
 
-            int num_contacts = anymal_sphere_->getContacts().size();
+            int num_contacts = husky_sphere_->getContacts().size();
             if (num_contacts > 0)
                 return true;
             else
@@ -815,7 +815,7 @@ namespace raisim {
 
         bool collision_check() {
             /// if the contact body is not feet, count as collision
-            for (auto &contact: anymal_->getContacts()) {
+            for (auto &contact: husky_->getContacts()) {
                 if (footIndices_.find(contact.getlocalBodyIndex()) == footIndices_.end()) {
                     return true;
                 }
@@ -827,9 +827,9 @@ namespace raisim {
             terminalReward = 0.f;
             return collision_check();
 
-            /// if anymal falls down
+            /// if husky falls down
             // raisim::Vec<3> base_position;
-            // anymal_->getFramePosition("base_to_base_inertia", base_position);
+            // husky_->getFramePosition("base_to_base_inertia", base_position);
             // if (base_position[2] < 0.35)
             //    return true;
             // return false;
@@ -851,7 +851,7 @@ namespace raisim {
     private:
         int gcDim_, gvDim_, nJoints_;
         bool visualizable_ = false;
-        raisim::ArticulatedSystem *anymal_;
+        raisim::ArticulatedSystem *husky_;
         Eigen::VectorXd gc_init_, gv_init_, gc_, gv_, pTarget_, pTarget12_, vTarget_;
         Eigen::VectorXd actionMean_, actionStd_, obDouble_;
         Eigen::Vector3d bodyLinearVel_, bodyAngularVel_;
@@ -913,7 +913,7 @@ namespace raisim {
         double hm_samplesX = 0., hm_samplesY = 0.;
 
         /// analytic planner
-        raisim::Sphere *anymal_sphere_;
+        raisim::Sphere *husky_sphere_;
         bool analytic_planner_run = false;
         std::vector<raisim::Visuals *> analytic_planned_traj;
         int max_analytic_planned_path_length = 0, n_analytic_planner_waypoints = 5;

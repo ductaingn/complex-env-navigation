@@ -1,12 +1,12 @@
 from ruamel.yaml import YAML, dump, RoundTripDumper
-from raisimGymTorch.env.bin import train
-from raisimGymTorch.env.RaisimGymVecEnv import RaisimGymVecEnv as VecEnv
-from raisimGymTorch.helper.raisim_gym_helper import ConfigurationSaver
-from raisimGymTorch.helper.utils_plot import plot_trajectory_prediction_result
+from RaisimGymTorch.env.bin import train
+from RaisimGymTorch.env.RaisimGymVecEnv import RaisimGymVecEnv as VecEnv
+from RaisimGymTorch.helper.raisim_gym_helper import ConfigurationSaver
+from RaisimGymTorch.helper.utils_plot import plot_trajectory_prediction_result
 import os
 import math
 import time
-import raisimGymTorch.algo.ppo.module as ppo_module
+import RaisimGymTorch.algo.ppo.module as ppo_module
 import torch.nn as nn
 import numpy as np
 import torch
@@ -14,11 +14,12 @@ from collections import Counter
 import argparse
 import pdb
 import wandb
-from raisimGymTorch.env.envs.train.model import Forward_Dynamics_Model
-from raisimGymTorch.env.envs.train.trainer import FDM_trainer
-from raisimGymTorch.env.envs.train.action import UserCommand, Constant_command_sampler, Linear_time_correlated_command_sampler, Normal_time_correlated_command_sampler
-from raisimGymTorch.env.envs.train.storage import Buffer
+from RaisimGymTorch.env.envs.train.model import Forward_Dynamics_Model
+from RaisimGymTorch.env.envs.train.trainer import FDM_trainer
+from RaisimGymTorch.env.envs.train.action import UserCommand, Constant_command_sampler, Linear_time_correlated_command_sampler, Normal_time_correlated_command_sampler
+from RaisimGymTorch.env.envs.train.storage import Buffer
 import random
+import io
 
 """
 Train Forward Dynamics Model (FDM)
@@ -43,10 +44,11 @@ task_name = "FDM_train"
 
 # configuration
 parser = argparse.ArgumentParser()
-parser.add_argument('-tw', '--tracking_weight', help='velocity command tracking policy weight path', type=str, required=True)
+parser.add_argument('-tw', '--tracking_weight', help='velocity command tracking policy weight path', type=str, default='')
 args = parser.parse_args()
 command_tracking_weight_path = args.tracking_weight
-
+if command_tracking_weight_path == '':
+    command_tracking_weight_path = 'data/command_tracking_flat/testing_2_layers/full_0.pt'
 # check if gpu is available
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -74,7 +76,12 @@ command_sampler_normal_correlated = Normal_time_correlated_command_sampler(user_
                                                                            std_scale_fixed=False)
 
 # create environment from the configuration file
-env = VecEnv(train.RaisimGymEnv(home_path + "/rsc", dump(cfg['environment'], Dumper=RoundTripDumper)), cfg['environment'], normalize_ob=False)
+yaml = YAML()
+stream = io.StringIO()
+yaml.dump(cfg['environment'], stream)
+environment_cfg = stream.getvalue()
+
+env = VecEnv(train.RaisimGymEnv(home_path + "/rsc", environment_cfg), cfg['environment'], normalize_ob=False)
 
 # shortcuts
 user_command_dim = 3
@@ -146,9 +153,8 @@ if logging:
 
 # load pre-trained command tracking policy weight
 assert command_tracking_weight_path != '', "Velocity command tracking policy weight path should be determined."
-command_tracking_policy = ppo_module.MLP(cfg['architecture']['command_tracking_policy_net'], nn.LeakyReLU,
-                                         command_tracking_ob_dim, command_tracking_act_dim)
-command_tracking_policy.load_state_dict(torch.load(command_tracking_weight_path, map_location=device)['actor_architecture_state_dict'])
+command_tracking_policy = nn.Sequential(nn.Linear(84,128,), nn.LeakyReLU(), nn.Linear(128,32), nn.LeakyReLU(), nn.Linear(32,4))
+command_tracking_policy.load_state_dict(torch.load(command_tracking_weight_path, map_location=device))
 command_tracking_policy.to(device)
 command_tracking_weight_dir = command_tracking_weight_path.rsplit('/', 1)[0] + '/'
 iteration_number = command_tracking_weight_path.rsplit('/', 1)[1].split('_', 1)[1].rsplit('.', 1)[0]
@@ -327,7 +333,12 @@ for update in range(cfg["environment"]["max_n_update"]):
         print("Sample new environment")
         # create environment from the configuration file
         cfg["environment"]["seed"]["train"] = update + 2000
-        env = VecEnv(train.RaisimGymEnv(home_path + "/rsc", dump(cfg['environment'], Dumper=RoundTripDumper)), cfg['environment'], normalize_ob=False)
+        yaml = YAML()
+        stream = io.StringIO()
+        yaml.dump(cfg['environment'], stream)
+        environment_cfg = stream.getvalue()
+
+        env = VecEnv(train.RaisimGymEnv(home_path + "/rsc", environment_cfg), cfg['environment'], normalize_ob=False)
         env.load_scaling(command_tracking_weight_dir, int(iteration_number))
     
     # prepare for training
@@ -470,5 +481,4 @@ for update in range(cfg["environment"]["max_n_update"]):
         print('{:<40} {:>6}'.format("real time factor: ", '{:6.0f}'.format(total_steps / (end - start)
                                                                            * cfg['environment']['control_dt'])))
         print('----------------------------------------------------\n')
-
 

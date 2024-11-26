@@ -1,19 +1,20 @@
 from ruamel.yaml import YAML, dump, RoundTripDumper
-from raisimGymTorch.env.bin import test
-from raisimGymTorch.env.RaisimGymVecEnv import RaisimGymVecEnv as VecEnv
+from RaisimGymTorch.env.bin import test
+from RaisimGymTorch.env.RaisimGymVecEnv import RaisimGymVecEnv as VecEnv
 import os
 import math
 import time
-import raisimGymTorch.algo.ppo.module as ppo_module
+import RaisimGymTorch.algo.ppo.module as ppo_module
 import torch.nn as nn
 import numpy as np
 import torch
 import argparse
 import pdb
-from raisimGymTorch.env.envs.train.model import Forward_Dynamics_Model
-from raisimGymTorch.env.envs.train.action import UserCommand, Stochastic_action_planner_normal
-from raisimGymTorch.env.envs.train.storage import Buffer
+from RaisimGymTorch.env.envs.train.model import Forward_Dynamics_Model
+from RaisimGymTorch.env.envs.train.action import UserCommand, Stochastic_action_planner_normal
+from RaisimGymTorch.env.envs.train.storage import Buffer
 import random
+import io
 
 """
 Safety-Remote Control using random sampler
@@ -83,7 +84,12 @@ cfg['environment']['num_envs'] = 1
 cfg['environment']["harsh_collision"] = True
 
 # create environment from the configuration file
-env = VecEnv(test.RaisimGymEnv(home_path + "/rsc", dump(cfg['environment'], Dumper=RoundTripDumper)), cfg['environment'], normalize_ob=False)
+yaml = YAML()
+stream = io.StringIO()
+yaml.dump(cfg['environment'], stream)
+environment_cfg = stream.getvalue()
+
+env = VecEnv(test.RaisimGymEnv(home_path + "/rsc", environment_cfg), cfg['environment'], normalize_ob=False)
 
 # shortcuts
 user_command_dim = 3
@@ -106,9 +112,10 @@ COM_buffer = Buffer(env.num_envs, COM_history_time_step, COM_feature_dim)
 
 # Load pre-trained command tracking policy weight
 assert command_tracking_weight_path != '', "Pre-trained command tracking policy weight path should be determined."
-command_tracking_policy = ppo_module.MLP(cfg['command_tracking']['architecture'], nn.LeakyReLU,
-                                         command_tracking_ob_dim, command_tracking_act_dim)
-command_tracking_policy.load_state_dict(torch.load(command_tracking_weight_path, map_location=device)['actor_architecture_state_dict'])
+command_tracking_policy = nn.Linear(command_tracking_ob_dim, command_tracking_act_dim)
+# command_tracking_policy = ppo_module.MLP(cfg['command_tracking']['architecture'], nn.LeakyReLU,
+                                        #  command_tracking_ob_dim, command_tracking_act_dim)
+# command_tracking_policy.load_state_dict(torch.load(command_tracking_weight_path, map_location=device)['actor_architecture_state_dict'])
 command_tracking_policy.to(device)
 command_tracking_weight_dir = command_tracking_weight_path.rsplit('/', 1)[0] + '/'
 iteration_number = command_tracking_weight_path.rsplit('/', 1)[1].split('_', 1)[1].rsplit('.', 1)[0]
@@ -160,7 +167,7 @@ cfg["environment"]["n_evaluate_envs"] = 5
 
 print("<<-- Evaluating Safety Remote Control -->>")
 
-pdb.set_trace()
+# pdb.set_trace()
 
 for grid_size in [2.5, 3., 4., 5.]:
     print("===========================================")
@@ -176,7 +183,11 @@ for grid_size in [2.5, 3., 4., 5.]:
     for env_id in range(cfg["environment"]["n_evaluate_envs"]):
         # Generate new environment with different seed (reset is automatically called)
         cfg["environment"]["seed"]["evaluate"] = env_id * 10 + init_seed
-        env = VecEnv(test.RaisimGymEnv(home_path + "/rsc", dump(cfg['environment'], Dumper=RoundTripDumper)), cfg['environment'], normalize_ob=False)
+        yaml = YAML()
+        stream = io.StringIO()
+        yaml.dump(cfg['environment'], stream)
+        environment_cfg = stream.getvalue()
+        env = VecEnv(test.RaisimGymEnv(home_path + "/rsc", environment_cfg), cfg['environment'], normalize_ob=False)
         env.load_scaling(command_tracking_weight_dir, int(iteration_number))
 
         # Initialize
@@ -242,7 +253,7 @@ for grid_size in [2.5, 3., 4., 5.]:
                 tracking_obs = tracking_obs.astype(np.float32)
 
                 with torch.no_grad():
-                    tracking_action = command_tracking_policy.architecture(torch.from_numpy(tracking_obs).to(device))
+                    tracking_action = command_tracking_policy(torch.from_numpy(tracking_obs).to(device))
 
                 _, done = env.step(tracking_action.cpu().detach().numpy())
 
@@ -362,7 +373,7 @@ for grid_size in [2.5, 3., 4., 5.]:
                 tracking_obs = tracking_obs.astype(np.float32)
 
                 with torch.no_grad():
-                    tracking_action = command_tracking_policy.architecture(torch.from_numpy(tracking_obs).to(device))
+                    tracking_action = command_tracking_policy(torch.from_numpy(tracking_obs).to(device))
 
                 _, done = env.step(tracking_action.cpu().detach().numpy())
 
