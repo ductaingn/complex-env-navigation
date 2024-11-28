@@ -117,7 +117,7 @@ class Analytic_planner:
             self.path_coordinates = self.path_coordinates.astype(np.float32)
             return self.path_coordinates.copy()
         else:
-            # print("No solution found")
+            print("No solution found")
             return None
 
     def visualize_path(self):

@@ -6,7 +6,7 @@ logging: False
 path:
   home: '/home/nguyen/Projects/ChargingRobot/raisim/raisimLib/complex-env-navigation/' # Setup the project directory path TODO: PATH_SETUP_REQUIRED # ex) /home/me/raisim/raisimLib/complex-env-navigation/
   command_tracking: data/command_tracking_flat/testing_2_layers/full_0.pt
-  FDM: 'data/FDM_train/full_900.pt' # Setup the trained FDM weight path relative to the project directory path  TODO: WEIGHT_PATH_SETUP_REQUIRED # ex) data/FDM_train/XXX/full_XXX.pt
+  FDM: 'data/FDM_train/2024-11-26-16-05-30/full_200.pt' # Setup the trained FDM weight path relative to the project directory path  TODO: WEIGHT_PATH_SETUP_REQUIRED # ex) data/FDM_train/XXX/full_XXX.pt
   ITS: 'data/ITS_train/full_50.pt'  # Setup the trained ITS weight path relative to the project directory path  TODO: WEIGHT_PATH_SETUP_REQUIRED # ex) data/ITS_train/XXX/full_XXX.pt
 
 # Environment configuration
@@ -36,8 +36,8 @@ environment:
       max: 1.2
   test_obstacle_grid_size: 2.3  # 2.3 / 3.0 / 4.0 / 5.0
   test_obstacle_size: # cylinder: radius (min ~ max) / box: side length (min*2 ~ max*2)
-    min: 0.05  # 0.3
-    max: 1.0  # 0.5
+    min: 0.01  # 0.3
+    max: 0.3  # 0.5
   test_obstacle_randomness:
     min: 0.1
     max: 0.9
