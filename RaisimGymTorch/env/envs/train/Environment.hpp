@@ -643,9 +643,9 @@ namespace raisim {
 
             /// transformed user command should be concatenated to the observation
             obDouble_ << rot.e().row(2).transpose(),      /// body orientation (dim=3)
-                    gc_.tail(12),                    /// joint angles (dim=12)
+                    gc_.tail(nJoints_),                    /// joint angles (dim=nJoints_)
                     bodyLinearVel_, bodyAngularVel_, /// body linear&angular velocity (dim=3+3=6)
-                    gv_.tail(12),                  /// joint velocity (dim=12)
+                    gv_.tail(nJoints_),                  /// joint velocity (dim=nJoints_)
                     joint_position_error_history,    /// joint position error history (dim=24)
                     joint_velocity_history,          /// joint velocity history (dim=24)
                     lidar_scan_depth;                /// Lidar scan data (normalized)
